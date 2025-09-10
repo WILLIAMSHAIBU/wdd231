@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'WDD', 
             credits: 3, 
             completed: true,
-            semester: 'Spring 2023',
+            semester: 'Spring 2024',
             instructor: 'Professor Smith'
         },
         { 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'CSE', 
             credits: 4, 
             completed: true,
-            semester: 'Fall 2022',
+            semester: 'Fall 2024',
             instructor: 'Professor Johnson'
         },
         { 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'WDD', 
             credits: 3, 
             completed: true,
-            semester: 'Winter 2023',
+            semester: 'Winter 2025',
             instructor: 'Professor Williams'
         },
         { 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'WDD', 
             credits: 3, 
             completed: false,
-            semester: 'Fall 2023',
+            semester: 'Fall 2025',
             instructor: 'Professor Brown'
         },
         { 
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'CSE', 
             credits: 3, 
             completed: false,
-            semester: 'Winter 2024',
+            semester: 'Winter 2025',
             instructor: 'Professor Davis'
         }
     ];
