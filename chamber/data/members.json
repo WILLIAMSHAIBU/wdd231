@@ -1,0 +1,88 @@
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "Tech Solutions Inc.",
+            "address": "123 Tech Park, City, State 10001",
+            "phone": "(555) 123-4567",
+            "website": "https://techsolutions.example.com",
+            "image": "tech-solutions.jpg",
+            "membershipLevel": 3,
+            "category": "Technology",
+            "joinDate": "2022-01-15",
+            "description": "Providing innovative technology solutions for businesses of all sizes."
+        },
+        {
+            "id": 2,
+            "name": "Green Thumb Landscaping",
+            "address": "456 Garden Ave, City, State 10002",
+            "phone": "(555) 234-5678",
+            "website": "https://greenthumb.example.com",
+            "image": "green-thumb.jpg",
+            "membershipLevel": 2,
+            "category": "Landscaping",
+            "joinDate": "2021-11-03",
+            "description": "Professional landscaping services for residential and commercial properties."
+        },
+        {
+            "id": 3,
+            "name": "Summit Financial Advisors",
+            "address": "789 Finance Blvd, City, State 10003",
+            "phone": "(555) 345-6789",
+            "website": "https://summitfinancial.example.com",
+            "image": "summit-financial.jpg",
+            "membershipLevel": 3,
+            "category": "Financial Services",
+            "joinDate": "2020-05-22",
+            "description": "Comprehensive financial planning and investment management services."
+        },
+        {
+            "id": 4,
+            "name": "Urban Eats Restaurant",
+            "address": "101 Foodie Lane, City, State 10004",
+            "phone": "(555) 456-7890",
+            "website": "https://urbaneats.example.com",
+            "image": "urban-eats.jpg",
+            "membershipLevel": 1,
+            "category": "Restaurant",
+            "joinDate": "2023-02-10",
+            "description": "Award-winning cuisine with locally-sourced ingredients in a modern atmosphere."
+        },
+        {
+            "id": 5,
+            "name": "Elite Fitness Center",
+            "address": "202 Health Way, City, State 10005",
+            "phone": "(555) 567-8901",
+            "website": "https://elitefitness.example.com",
+            "image": "elite-fitness.jpg",
+            "membershipLevel": 2,
+            "category": "Fitness",
+            "joinDate": "2022-08-17",
+            "description": "State-of-the-art fitness facility with personal training and group classes."
+        },
+        {
+            "id": 6,
+            "name": "Creative Minds Marketing",
+            "address": "303 Business Center Dr, City, State 10006",
+            "phone": "(555) 678-9012",
+            "website": "https://creativeminds.example.com",
+            "image": "creative-minds.jpg",
+            "membershipLevel": 3,
+            "category": "Marketing",
+            "joinDate": "2021-03-29",
+            "description": "Full-service marketing agency specializing in digital and traditional media."
+        },
+        {
+            "id": 7,
+            "name": "Harbor View Realty",
+            "address": "404 Shoreline Rd, City, State 10007",
+            "phone": "(555) 789-0123",
+            "website": "https://harborviewrealty.example.com",
+            "image": "harbor-view.jpg",
+            "membershipLevel": 2,
+            "category": "Real Estate",
+            "joinDate": "2022-06-14",
+            "description": "Your trusted partner in finding your dream home or commercial property."
+        }
+    ]
+}
