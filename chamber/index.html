@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blantyre Chamber of Commerce - Supporting local businesses and fostering economic growth in our community.">
+    <meta name="author" content="Blantyre Chamber of Commerce">
+    <title>Home - Blantyre Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/directory.js" defer></script>
+    <script src="js/spotlights.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" aria-label="Blantyre Chamber of Commerce Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>BLANTYRE</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburgerBtn">
+                    <span>&#9776;</span>
+                    <span>✕</span>
+                </button>
+                <ul id="primaryNav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="date-container">
+                <span id="currentDate"></span>
+            </div>
+        </div>
+        <div class="banner">
+            <p>🤝 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
+        </div>
+    </header>
+
+    <main class="home">
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/hero-small.jpg">
+                <source media="(max-width: 1000px)" srcset="images/hero-medium.jpg">
+                <img src="images/Blantyre.jpg" alt="Blantyre cityscape" loading="lazy">
+            </picture>
+            <div class="hero-content">
+                <h2>Welcome to Blantyre</h2>
+                <p>Supporting local businesses, strengthening our community</p>
+                <a href="join.html" class="btn btn-primary">Join the Chamber</a>
+            </div>
+        </section>
+
+        <section class="event">
+            <h3>Upcoming Events</h3>
+            <div class="event-card">
+                <h4>💎 The Diamond Shack Grand Opening</h4>
+                <p>Thursday, September 26th at 1:00 PM</p>
+                <p>Be among the first to explore our newest member's showroom with exclusive opening day specials!</p>
+            </div>
+            <div class="event-card">
+                <h4>📈 Business Networking Breakfast</h4>
+                <p>Friday, September 27th at 8:00 AM</p>
+                <p>Connect with local business leaders and expand your professional network over breakfast.</p>
+            </div>
+            <a href="events.html" class="btn btn-secondary">View All Events</a>
+        </section>
+
+        <section class="weather">
+            <h3>Current Weather</h3>
+            <div class="weather-current">
+                <div class="weather-temp">
+                    <img id="weather-icon" src="images/weather.png" alt="Weather icon">
+                    <p><span id="temperature">--</span>°F</p>
+                </div>
+                <p id="weather-description">--</p>
+                <div class="weather-details">
+                    <p>Humidity: <span id="humidity">--</span>%</p>
+                    <p>Wind: <span id="wind-speed">--</span> mph</p>
+                    <p>Feels like: <span id="feels-like">--</span>°F</p>
+                </div>
+            </div>
+            <div class="weather-forecast">
+                <h4>3-Day Forecast</h4>
+                <div id="forecast-container">
+                    <!-- Forecast will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div class="spotlight-container" id="spotlight-container">
+                <!-- Spotlights will be populated by JavaScript -->
+                <div class="loading">Loading featured members...</div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Grow Your Business With Us</h2>
+                <p>Join over 200 local businesses who are already benefiting from Chamber membership.</p>
+                <a href="join.html" class="btn btn-primary">Become a Member</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" loading="lazy">
+                <div>
+                    <h3>Blantyre Chamber of Commerce</h3>
+                    <p>123 Business Ave, Blantyre, Malawi</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>info@blantyrechamber.org</p>
+                <p>+265 997 590 000</p>
+                <div class="map-link">
+                    <a href="https://maps.google.com" target="_blank">📍 Location Map</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Blantyre Chamber | WILLIAM SHAIBU | WDD 230 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+                <p>Weather data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+    </script>
+</body>
+</html>
