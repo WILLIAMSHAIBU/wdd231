@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Blantyre Chamber of Commerce and become part of our growing business community.">
+    <meta name="author" content="Blantyre Chamber of Commerce">
+    <title>Join - Blantyre Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" aria-label="Blantyre Chamber of Commerce Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>BLANTYRE</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburgerBtn">
+                    <span>&#9776;</span>
+                    <span>✕</span>
+                </button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="date-container">
+            <p id="currentDate"></p>
+        </div>
+    </header>
+
+    <main class="join-container">
+        <h1>Become a Member</h1>
+        
+        <div class="join-content">
+            <form id="joinForm" action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name*
+                        <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Please enter your first name">
+                    </label>
+                    
+                    <label for="lastName">Last Name*
+                        <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Please enter your last name">
+                    </label>
+                    
+                    <label for="title">Title/Position
+                        <input type="text" id="title" name="title" autocomplete="organization-title" 
+                               pattern="[A-Za-z\-\s]{7,}" 
+                               title="Please enter at least 7 characters, only letters, hyphens, and spaces">
+                    </label>
+                    
+                    <label for="email">Email*
+                        <input type="email" id="email" name="email" required autocomplete="email" 
+                               placeholder="yourname@example.com" title="Please enter a valid email address">
+                    </label>
+                    
+                    <label for="phone">Mobile Phone*
+                        <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Please enter your phone number">
+                    </label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label for="businessName">Business/Organization Name*
+                        <input type="text" id="businessName" name="businessName" required autocomplete="organization" title="Please enter your business name">
+                    </label>
+                    
+                    <label for="businessDescription">Business Description
+                        <textarea id="businessDescription" name="businessDescription" rows="4"></textarea>
+                    </label>
+                </fieldset>
+                
+                <fieldset class="membership-levels">
+                    <legend>Membership Level*</legend>
+                    <label class="membership-option">
+                        <input type="radio" name="membership" value="np" required> 
+                        <strong>NP Membership</strong> (Non-Profit)
+                    </label>
+                    <label class="membership-option">
+                        <input type="radio" name="membership" value="bronze" required>
+                        <strong>Bronze Membership</strong>
+                    </label>
+                    <label class="membership-option">
+                        <input type="radio" name="membership" value="silver" required>
+                        <strong>Silver Membership</strong>
+                    </label>
+                    <label class="membership-option">
+                        <input type="radio" name="membership" value="gold" required>
+                        <strong>Gold Membership</strong>
+                    </label>
+                </fieldset>
+                
+                <input type="hidden" id="timestamp" name="timestamp">
+                
+                <button type="submit" class="btn btn-primary">Join Now</button>
+            </form>
+            
+            <aside class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <div class="membership-cards">
+                    <div class="membership-card" data-level="np">
+                        <h3>NP Membership</h3>
+                        <p class="price">Free</p>
+                        <ul>
+                            <li>Business listing in directory</li>
+                            <li>Access to member events</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-learn-more">Learn More</a>
+                    </div>
+                    
+                    <div class="membership-card" data-level="bronze">
+                        <h3>Bronze</h3>
+                        <p class="price">$250/year</p>
+                        <ul>
+                            <li>All NP benefits, plus:</li>
+                            <li>5% event discounts</li>
+                            <li>Quarterly training</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-learn-more">Learn More</a>
+                    </div>
+                    
+                    <div class="membership-card" data-level="silver">
+                        <h3>Silver</h3>
+                        <p class="price">$500/year</p>
+                        <ul>
+                            <li>All Bronze benefits, plus:</li>
+                            <li>10% event discounts</li>
+                            <li>Monthly training</li>
+                            <li>Featured in newsletter</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-learn-more">Learn More</a>
+                    </div>
+                    
+                    <div class="membership-card" data-level="gold">
+                        <h3>Gold</h3>
+                        <p class="price">$1,000/year</p>
+                        <ul>
+                            <li>All Silver benefits, plus:</li>
+                            <li>20% event discounts</li>
+                            <li>Weekly training</li>
+                            <li>Homepage spotlight</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline btn-learn-more">Learn More</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+        <!-- Modal for membership details -->
+        <div id="membershipModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Membership Details</h2>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" loading="lazy">
+                <div>
+                    <h3>Blantyre Chamber of Commerce</h3>
+                    <p>123 Business Ave, Blantyre, Malawi</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>info@blantyrechamber.mw</p>
+                <p>+265 123 4567</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="currentYear"></span> Blantyre Chamber</p>
+                <p>Williams Haibu</p>
+                <p>WDD 230 Project</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for joining the Blantyre Chamber of Commerce">
+    <meta name="author" content="Blantyre Chamber of Commerce">
+    <title>Thank You - Blantyre Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" aria-label="Blantyre Chamber of Commerce Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>BLANTYRE</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburgerBtn">
+                    <span>&#9776;</span>
+                    <span>✕</span>
+                </button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li class="active"><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="date-container">
+            <p id="currentDate"></p>
+        </div>
+    </header>
+
+    <main class="thank-you">
+        <div class="container">
+            <div class="thank-you-card">
+                <div class="checkmark">✓</div>
+                <h1>Thank You for Joining!</h1>
+                <p>Your application has been received. A member of our team will contact you within 2 business days to complete your membership setup.</p>
+                
+                <div class="application-details">
+                    <h2>Application Details</h2>
+                    <div id="applicationInfo">
+                        <!-- Filled by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="next-steps">
+                    <h3>What's Next?</h3>
+                    <ol>
+                        <li>We'll review your application</li>
+                        <li>You'll receive a welcome email with next steps</li>
+                        <li>Your business will be listed in our directory</li>
+                    </ol>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                    <a href="directory.html" class="btn btn-secondary">View Directory</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" loading="lazy">
+                <div>
+                    <h3>Blantyre Chamber of Commerce</h3>
+                    <p>123 Business Ave, Blantyre, Malawi</p>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>info@blantyrechamber.mw</p>
+                <p>+265 123 4567</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; <span id="currentYear"></span> Blantyre Chamber</p>
+                <p>Williams Haibu</p>
+                <p>WDD 230 Project</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Display form data from URL parameters
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const appInfo = document.getElementById('applicationInfo');
+            
+            if (urlParams.toString()) {
+                let html = '<dl>';
+                
+                // Format and display each parameter
+                for (const [key, value] of urlParams.entries()) {
+                    if (key === 'timestamp') {
+                        const date = new Date(parseInt(value));
+                        html += `<dt>Application Date:</dt><dd>${date.toLocaleString()}</dd>`;
+                    } else if (key === 'membership') {
+                        const membershipMap = {
+                            'np': 'NP Membership (Non-Profit)',
+                            'bronze': 'Bronze Membership',
+                            'silver': 'Silver Membership',
+                            'gold': 'Gold Membership'
+                        };
+                        html += `<dt>Membership Level:</dt><dd>${membershipMap[value] || value}</dd>`;
+                    } else if (key === 'businessDescription') {
+                        if (value) {
+                            html += `<dt>Business Description:</dt><dd>${value}</dd>`;
+                        }
+                    } else if (key === 'title') {
+                        if (value) {
+                            html += `<dt>Title/Position:</dt><dd>${value}</dd>`;
+                        }
+                    } else if (key === 'phone') {
+                        html += `<dt>Phone:</dt><dd><a href="tel:${value}">${value}</a></dd>`;
+                    } else if (key === 'email') {
+                        html += `<dt>Email:</dt><dd><a href="mailto:${value}">${value}</a></dd>`;
+                    } else if (key === 'businessName') {
+                        html += `<dt>Business Name:</dt><dd>${value}</dd>`;
+                    } else if (key === 'firstName' || key === 'lastName') {
+                        // Skip, we'll handle these together
+                    }
+                }
+                
+                // Add first and last name if they exist
+                const firstName = urlParams.get('firstName');
+                const lastName = urlParams.get('lastName');
+                if (firstName || lastName) {
+                    html += `<dt>Name:</dt><dd>${firstName} ${lastName}</dd>`;
+                }
+                
+                html += '</dl>';
+                appInfo.innerHTML = html;
+            } else {
+                appInfo.innerHTML = '<p>No application data found. Please submit the <a href="join.html">membership form</a>.</p>';
+            }
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Set last modified date
+            document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+        });
+    </script>
+</body>
+</html>
