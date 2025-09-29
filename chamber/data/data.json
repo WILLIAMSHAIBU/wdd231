@@ -1,0 +1,52 @@
+{
+    "attractions": [
+        {
+            "name": "St. Michael and All Angels Church",
+            "address": "Chileka Rd, Blantyre, Malawi",
+            "description": "A historic church built between 1888 and 1891, known for its stunning architecture and historical significance.",
+            "image": "images/download.jpeg"
+        },
+        {
+            "name": "Mandala House",
+            "address": "Mandala Rd, Blantyre, Malawi",
+            "description": "The oldest European building in Malawi, built in 1882. It now houses a library and art gallery.",
+            "image": "images/mandala.jpeg"
+        },
+        {
+            "name": "Chichiri Museum",
+            "address": "Kenyatta Dr, Blantyre, Malawi",
+            "description": "Also known as the Malawi Museum, it showcases the country's natural and cultural heritage.",
+            "image": "images/Museum.jpeg"
+        },
+        {
+            "name": "La Caverna Art Gallery",
+            "address": "Mandala Rd, Blantyre, Malawi",
+            "description": "A popular spot for art lovers, featuring a wide range of local and international art.",
+            "image": "images/Caverna.jpeg"
+        },
+        {
+            "name": "Jacaranda Cultural Center",
+            "address": "Top Mandala, Blantyre, Malawi",
+            "description": "A vibrant hub for cultural events, music, and art, promoting Malawian talent.",
+            "image": "images/Jacaranda.jpeg"
+        },
+        {
+            "name": "Blantyre Market",
+            "address": "Glyn Jones Rd, Blantyre, Malawi",
+            "description": "A bustling market where you can find everything from fresh produce to local crafts and textiles.",
+            "image": "images/Market.jpeg"
+        },
+        {
+            "name": "Michiru Mountain Conservation Area",
+            "address": "Blantyre, Malawi",
+            "description": "A beautiful nature reserve perfect for hiking, bird watching, and enjoying panoramic views of the city.",
+            "image": "images/Michiru.jpeg"
+        },
+        {
+            "name": "Tiyamike Sewing Project",
+            "address": "Chilomoni, Blantyre, Malawi",
+            "description": "A community-based project that empowers local women through sewing and craft-making.",
+            "image": "images/Tiyamike.jpeg"
+        }
+    ]
+}

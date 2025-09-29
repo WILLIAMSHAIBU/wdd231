@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Blantyre - A vibrant city with rich history and attractions.">
+    <meta name="author" content="Blantyre Chamber of Commerce">
+    <title>Discover - Blantyre Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Blantyre Chamber of Commerce Logo" aria-label="Blantyre Chamber of Commerce Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>BLANTYRE</h1>
+                        <p>Chamber of Commerce</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <button id="hamburgerBtn">
+                    <span>&#9776;</span> 
+                    <span>✕</span>
+                </button>
+                <ul id="primaryNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+            <div class="date-container">
+                <span id="currentDate"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="discover-main">
+        <div class="sidebar">
+            <h2>Discover Blantyre</h2>
+            <p>Welcome to Blantyre, the commercial heart of Malawi. Explore our rich history, vibrant culture, and thriving business community.</p>
+            <div id="visitor-message"></div>
+            <div class="glance">
+                <h3>Blantyre at a Glance</h3>
+                <ul>
+                    <li><strong>Population:</strong> Approx. 1.9 Million (Metro)</li>
+                    <li><strong>Year Founded:</strong> 1876</li>
+                    <li><strong>Elevation:</strong> 1,039 m (3,409 ft)</li>
+                    <li><strong>Main Industries:</strong> Trade, Retail, Manufacturing</li>
+                    <li><strong>Known For:</strong> Malawi's Center of Finance and Commerce</li>
+                </ul>
+            </div>
+        </div>
+        <div class="gallery">
+            <!-- Cards will be populated by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <div>
+                    <h3>Blantyre Chamber of Commerce</h3>
+                    <p>123 Business Ave, Blantyre, Malawi</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>info@blantyrechamber.org</p>
+                <p>+265 997 590 000</p>
+                <div class="map-link">
+                    <a href="https://maps.google.com" target="_blank">📍 Location Map</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Blantyre Chamber | WILLIAM SHAIBU | WDD 230 Project</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
